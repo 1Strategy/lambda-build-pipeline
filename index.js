@@ -1,6 +1,8 @@
-let time = require('time');
+"use strict";
+
+const time = require('time');
 exports.handler = (event, context, callback) => {
-    var currentTime = new time.Date();
+    let currentTime = new time.Date();
     currentTime.setTimezone("America/Los_Angeles");
     callback(null, {
         statusCode: '200',
